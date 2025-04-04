@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import Upload from "./components/upload/Upload";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Upload2 from "./components/upload2";
+// import Upload2 from "./components/upload2";
 
 const App = () => {
   return (
