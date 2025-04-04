@@ -3,8 +3,8 @@ import { HiOutlineMenuAlt4 } from "react-icons/hi";
 
 const Header = () => {
   return (
-    <div className="text-center  flex items-center justify-between  opacity-98  shadow-2xs px-5 sticky top-0 bg-white  border-2">
-      <div>
+    <div className="flex items-center   opacity-98  shadow-2xs px-5 sticky top-0 bg-white  justify-between xl:px-10">
+      <div className="flex items-center gap-7">
         <svg
           width="210"
           height="72"
@@ -56,9 +56,7 @@ const Header = () => {
             fill="#BAC0C4"
           ></path>
         </svg>
-      </div>
-      <div>
-        <ul className="hidden gap-3 items-center text-gray-700  xl:flex">
+        <ul className="hidden gap-3 items-center text-gray-700  font-medium xl:flex">
           <li className="cursor-pointer hover:bg-gray-200 p-2 px-3 rounded-full">
             Remove Background
           </li>
@@ -98,10 +96,14 @@ const Header = () => {
         </ul>
       </div>
       <div className="col2 hidden xl:flex items-center gap-5">
-        <span>Log in</span>
-        <span className="bg-gray-200 py-2 px-4 rounded-full">Sign Up</span>
+        <span className="cursor-pointer hover:bg-gray-200 p-2 px-3 rounded-full">
+          Log in
+        </span>
+        <span className="bg-gray-200 py-2 px-4 rounded-full hover:cursor-pointer">
+          Sign Up
+        </span>
       </div>
-      <div className="xl:hidden flex">
+      <div className="flex  xl:hidden">
         <HiOutlineMenuAlt4 className="text-4xl" />
       </div>
     </div>
