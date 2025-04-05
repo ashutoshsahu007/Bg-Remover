@@ -2,8 +2,8 @@ import React from "react";
 
 const TryImage = () => {
   return (
-    <div>
-      <div className="h-[120px] flex flex-col items-center justify-center gap-3 sm:flex-row  sm:gap-5 ">
+    <div className="">
+      <div className="h-[120px]  flex flex-col items-center justify-center gap-3 sm:flex-row  sm:gap-5 ">
         <div className="flex flex-row  sm:flex-col items-start gap-1 text-gray-800 text-[16px]  font-semibold">
           <span>No image?</span>
           <span>Try one of these:</span>
