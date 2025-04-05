@@ -40,7 +40,7 @@ const UploadImage = () => {
     e.stopPropagation();
   };
   return (
-    <div className="col2 bg-white shadow-[0px_0px_50px_10px_rgba(0,0,0,0.1)] rounded-4xl w-[432px] h-[346px] flex items-center justify-center flex-col gap-4">
+    <div className="col2 bg-white sm:shadow-[0px_0px_50px_10px_rgba(0,0,0,0.1)] rounded-4xl w-[300px] h-[346px] flex items-center justify-center flex-col gap-4">
       {/* Hidden Input with Label acting as a button */}
       <label className="font-medium text-2xl cursor-pointer rounded-full  text-white bg-[#007bff] px-5 py-3">
         Upload Image
@@ -70,7 +70,7 @@ const UploadImage = () => {
     id="fileInput"
   />
 </div> */}
-      <p className="text-sm text-gray-600">
+      <p className="text-sm hidden sm:flex text-gray-600">
         paste image or
         <span onClick={handleUserInput} className="underline cursor-pointer ">
           URL

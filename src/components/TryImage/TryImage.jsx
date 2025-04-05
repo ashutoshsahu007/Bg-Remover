@@ -4,8 +4,8 @@ const TryImage = () => {
   return (
     <div>
       <div>
-        <div className="h-[120px] flex items-center justify-center gap-7">
-          <div className="flex flex-col items-start gap-1 text-gray-800 text-[15px] font-semibold">
+        <div className="h-[120px] flex flex-col items-center justify-center gap-7">
+          <div className="flex flex-row  sm:flex-col items-start gap-1 text-gray-800 text-sm sm:text-[15px] font-semibold">
             <span>No image?</span>
             <span>Try one of these:</span>
           </div>
@@ -13,22 +13,22 @@ const TryImage = () => {
             <img
               src="1photo.jpg"
               alt=""
-              className="rounded-lg w-[63px] h-[63px]"
+              className="rounded-lg w-[47.59px] h-[47.59px] sm:w-[63px] sm:h-[63px]"
             />
             <img
               src="2photo.jpg"
               alt=""
-              className="rounded-lg w-[63px] h-[63px]"
+              className="rounded-lg w-[47.59px] h-[47.59px] sm:w-[63px] sm:h-[63px]"
             />
             <img
               src="3photo.jpg"
               alt=""
-              className="rounded-lg w-[63px] h-[63px]"
+              className="rounded-lg w-[47.59px] h-[47.59px] sm:w-[63px] sm:h-[63px]"
             />
             <img
               src="4photo.jpg"
               alt=""
-              className="rounded-lg w-[63px] h-[63px]"
+              className="rounded-lg w-[47.59px] h-[47.59px] sm:w-[63px] sm:h-[63px]"
             />
           </div>
         </div>
