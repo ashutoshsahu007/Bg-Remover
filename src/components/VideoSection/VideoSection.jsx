@@ -3,11 +3,15 @@ import React from "react";
 const VideoSection = () => {
   return (
     <div className="lg:h-[650px] w-[90%] m-auto  flex flex-col md:flex-row md:items-end gap-5 items-center justify-center">
-      <video autoPlay muted className="w-[80vw] max-w-[320px]">
+      <video
+        autoPlay
+        muted
+        className="w-[80vw] max-w-[320px] rounded-3xl md:pb-3"
+      >
         <source src="video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="flex flex-col md:items-start items-center justify-center gap-6 md:gap-5">
+      <div className="flex flex-col md:items-start items-center justify-center md:w-[350px] gap-6 md:gap-5">
         <h1 className="text-[32px]  text-center md:text-start font-bold md:text-5xl leading-[2.6rem] md:leading-[4rem]  text-gray-700">
           Remove Image Background
         </h1>

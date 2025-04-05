@@ -4,8 +4,8 @@ const TryImage = () => {
   return (
     <div>
       <div>
-        <div className="h-[120px] flex flex-col items-center justify-center gap-7">
-          <div className="flex flex-row  sm:flex-col items-start gap-1 text-gray-800 text-sm sm:text-[15px] font-semibold">
+        <div className="h-[120px] flex flex-col items-center justify-center gap-3">
+          <div className="flex flex-row  sm:flex-col items-start gap-1 text-gray-800 text-[16px]  font-semibold">
             <span>No image?</span>
             <span>Try one of these:</span>
           </div>
@@ -33,7 +33,7 @@ const TryImage = () => {
           </div>
         </div>
         <div>
-          <p className="text-[10px]">
+          <p className="text-[10px] text-center">
             By uploading an image or URL you agree to our
             <a className="underline"> Terms of Service.</a>To learn more about
             how remove.bg handles your personal data.check our
