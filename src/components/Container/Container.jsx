@@ -4,7 +4,7 @@ import TryImage from "../TryImage/TryImage";
 
 const Container = () => {
   return (
-    <div className="flex w-[85%] m-auto lg:m-0 flex-col sm:w-[448px] lg:h-[700px]  items-start  justify-end ">
+    <div className="flex w-[85%] m-auto lg:m-0 flex-col sm:w-[448px] lg:h-[650px]  items-start  justify-end ">
       <UploadImage />
       <TryImage />
     </div>
