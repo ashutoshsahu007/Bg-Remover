@@ -1,11 +1,52 @@
-import React from "react";
+import React, { useState, useContext, useEffect } from "react";
+import { MyContext } from "../../App";
 
 const Upload = () => {
+  const { file, setFile } = useContext(MyContext);
+  const [imageUrl, setImageUrl] = useState(URL.createObjectURL(file));
+
+  const removeBackground = async (file) => {
+    const formData = new FormData();
+    formData.append("image_file", file);
+    formData.append("size", "auto");
+
+    const response = await fetch("https://api.remove.bg/v1.0/removebg", {
+      method: "POST",
+      headers: {
+        "X-Api-Key": "ic3RvBvrz3Tr8drUM9kg8odm", // ⚠️ Visible in browser!
+      },
+      body: formData,
+    });
+
+    if (!response.ok) {
+      console.error("Error:", await response.text());
+      return null;
+    }
+
+    const blob = await response.blob();
+    const imageUrl = URL.createObjectURL(blob);
+    return imageUrl;
+  };
+
+  useEffect(() => {
+    if (file) {
+      removeBackground(file).then((url) => {
+        if (url) {
+          // Do something with the new image
+          console.log("New Image URL:", url);
+          // setFile(url);
+          setImageUrl(url);
+        }
+      });
+    }
+  }, []);
   return (
     <div className="flex flex-col justify-between gap-28 py-8">
       <div className="flex flex-row items-start justify-center gap-20">
         <div className="flex flex-col gap-5 items-center">
-          <div className="rounded-lg border-2 w-[220px] h-[220px]"></div>
+          <div className="rounded-lg border-2 w-[220px] h-[220px]">
+            <img src={imageUrl} alt="upload" className="w-full h-full" />
+          </div>
           <div className="flex items-center gap-5">
             <span>
               <svg
