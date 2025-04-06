@@ -2,9 +2,8 @@ import React from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
-import Upload from "./components/upload/Upload";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Upload2 from "./components/Upload2";
+import Upload from "./components/upload/Upload";
 
 const App = () => {
   return (
@@ -14,7 +13,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/upload" element={<Upload />} />
-          <Route path="/upload2" element={<Upload2 />} />
         </Routes>
       </div>
     </BrowserRouter>

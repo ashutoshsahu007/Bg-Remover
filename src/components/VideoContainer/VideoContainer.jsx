@@ -1,6 +1,6 @@
 import React from "react";
 
-const VideoSection = () => {
+const VideoContainer = () => {
   return (
     <div className="lg:h-[550px] lg:w-[512px]   lg:items-start w-[90%] m-auto lg:m-0  flex flex-col md:flex-row md:items-end gap-5 items-center justify-center lg:justify-start lg:flex-col">
       <video
@@ -26,4 +26,4 @@ const VideoSection = () => {
   );
 };
 
-export default VideoSection;
+export default VideoContainer;

@@ -14,6 +14,16 @@ const UploadImage = () => {
     }
   };
 
+  const handleImageChange2 = (file) => {
+    if (file && file.type.startsWith("image/")) {
+      const imageURL = URL.createObjectURL(file);
+      setFile(file.name);
+      console.log(file.name);
+    } else {
+      alert("Please upload a valid image.");
+    }
+  };
+
   // 3rd way to handle image upload
   const handleUserInput = () => {
     const input = prompt("Image URL :");
@@ -27,7 +37,8 @@ const UploadImage = () => {
   const handleDrop = (e) => {
     e.preventDefault();
     const file = e.dataTransfer.files[0];
-    handleImageChange(file);
+    handleImageChange2(file);
+    console.log(file);
   };
 
   const handleFileSelect = (e) => {
@@ -51,27 +62,23 @@ const UploadImage = () => {
           className="hidden"
         />
       </label>
-      {/* drop an image feature  */}
-      {/* <div
-  onDrop={handleDrop}
-  onDragOver={preventDefaults}
-  onDragEnter={preventDefaults}
->
-  {file ? (
-    `Uploaded: ${file.name}`
-  ) : (
-    <p className="text-xl font-medium text-gray-600">or drop a file,</p>
-  )}
-  <input
-    type="file"
-    accept="image/*"
-    onChange={handleFileSelect}
-    className="hidden"
-    id="fileInput"
-  />
-</div> */}
+
+      <div
+        onDrop={handleDrop}
+        onDragOver={preventDefaults}
+        onDragEnter={preventDefaults}
+      >
+        <p className="text-xl font-medium text-gray-600">or drop a file,</p>
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handleFileSelect}
+          className="hidden"
+          id="fileInput"
+        />
+      </div>
       <p className="text-sm hidden sm:flex text-gray-600">
-        paste image or
+        paste image or &nbsp;
         <span onClick={handleUserInput} className="underline cursor-pointer ">
           URL
         </span>
