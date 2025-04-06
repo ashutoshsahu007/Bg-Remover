@@ -11,7 +11,6 @@ const UploadImage = () => {
     const file = e.target.files[0];
     if (file.type.startsWith("image/")) {
       const imageURL = URL.createObjectURL(file);
-      // setFile(imageURL);
       setFile(file);
       navigate("/upload");
     } else {
@@ -22,7 +21,6 @@ const UploadImage = () => {
   const handleImageChange2 = (file) => {
     if (file && file.type.startsWith("image/")) {
       const imageURL = URL.createObjectURL(file);
-      // setFile(imageURL);
       setFile(file);
       navigate("/upload");
     } else {

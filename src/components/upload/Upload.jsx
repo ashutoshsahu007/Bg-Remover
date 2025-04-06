@@ -13,7 +13,8 @@ const Upload = () => {
     const response = await fetch("https://api.remove.bg/v1.0/removebg", {
       method: "POST",
       headers: {
-        "X-Api-Key": "ic3RvBvrz3Tr8drUM9kg8odm", // ⚠️ Visible in browser!
+        // "X-Api-Key": "ic3RvBvrz3Tr8drUM9kg8odm",
+        "X-Api-Key": "ic3RvBvrz3Tr8drUM9kg8odmfake", // ⚠️ Visible in browser!
       },
       body: formData,
     });
@@ -32,22 +33,20 @@ const Upload = () => {
     if (file) {
       removeBackground(file).then((url) => {
         if (url) {
-          // Do something with the new image
           console.log("New Image URL:", url);
-          // setFile(url);
           setImageUrl(url);
         }
       });
     }
   }, []);
   return (
-    <div className="flex flex-col justify-between gap-28 py-8">
-      <div className="flex flex-row items-start justify-center gap-20">
+    <div className="flex flex-col  justify-between gap-28 py-8">
+      <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10 md:gap-20 ">
         <div className="flex flex-col gap-5 items-center">
-          <div className="rounded-lg border-2 w-[220px] h-[220px]">
+          <div className="rounded-lg border-2 w-[220px] h-[220px] ">
             <img src={imageUrl} alt="upload" className="w-full h-full" />
           </div>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-5 ">
             <span>
               <svg
                 width="24"
@@ -148,7 +147,7 @@ const Upload = () => {
             </span>
           </div>
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 ">
           <button className="flex items-center gap-2 text-sm font-semibold">
             <div className="border-3 p-2 w-fit rounded-full  border-gray-200">
               <svg
@@ -310,7 +309,7 @@ const Upload = () => {
           </button>
         </div>
       </div>
-      <div className="flex flex-row justify-between  px-10 items-center  w-full">
+      <div className="hidden md:flex flex-row justify-between  px-10 items-center  w-full ">
         <div className="flex items-center gap-5">
           <div className="h-[60px] w-[60px] bg-[#c1d5ff] rounded-xl text-3xl text-[#0f70e6] flex items-center justify-center  font-extralight">
             +
