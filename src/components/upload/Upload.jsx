@@ -21,6 +21,7 @@ const Upload = () => {
 
     if (!response.ok) {
       console.error("Error:", await response.text());
+      alert("api key finisehd or image not found");
       return null;
     }
 
@@ -33,7 +34,6 @@ const Upload = () => {
     if (file) {
       removeBackground(file).then((url) => {
         if (url) {
-          console.log("New Image URL:", url);
           setImageUrl(url);
         }
       });
@@ -314,7 +314,13 @@ const Upload = () => {
           <div className="h-[60px] w-[60px] bg-[#c1d5ff] rounded-xl text-3xl text-[#0f70e6] flex items-center justify-center  font-extralight">
             +
           </div>
-          <div className="h-[60px] w-[60px] bg-red-500 rounded-xl"></div>
+          <div className="h-[60px] w-[60px] bg-red-500 rounded-xl">
+            <img
+              src={imageUrl}
+              alt=""
+              className="rounded-xl h-[60px] w-[60px] object-cover"
+            />
+          </div>
         </div>
         <div className="flex justify-center gap-6 text-gray-600">
           <p>Rate this result </p>

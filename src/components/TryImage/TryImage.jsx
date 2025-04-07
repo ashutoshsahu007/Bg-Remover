@@ -12,22 +12,22 @@ const TryImage = () => {
           <img
             src="1photo.jpg"
             alt=""
-            className="rounded-lg w-[47.59px] h-[47.59px] sm:w-[63px] sm:h-[63px]"
+            className="rounded-lg w-[47.59px] h-[47.59px] sm:w-[63px] sm:h-[63px]  hover:contrast-[85%] hover:brightness-[115%] hover:cursor-pointer"
           />
           <img
             src="2photo.jpg"
             alt=""
-            className="rounded-lg w-[47.59px] h-[47.59px] sm:w-[63px] sm:h-[63px]"
+            className="rounded-lg w-[47.59px] h-[47.59px] sm:w-[63px] sm:h-[63px]  hover:contrast-[85%] hover:brightness-[115%] hover:cursor-pointer"
           />
           <img
             src="3photo.jpg"
             alt=""
-            className="rounded-lg w-[47.59px] h-[47.59px] sm:w-[63px] sm:h-[63px]"
+            className="rounded-lg w-[47.59px] h-[47.59px] sm:w-[63px] sm:h-[63px]   hover:contrast-[85%] hover:brightness-[115%] hover:cursor-pointer"
           />
           <img
             src="4photo.jpg"
             alt=""
-            className="rounded-lg w-[47.59px] h-[47.59px] sm:w-[63px] sm:h-[63px]"
+            className="rounded-lg w-[47.59px] h-[47.59px] sm:w-[63px] sm:h-[63px]   hover:contrast-[85%] hover:brightness-[115%] hover:cursor-pointer"
           />
         </div>
       </div>

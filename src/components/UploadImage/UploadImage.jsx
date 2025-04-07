@@ -51,7 +51,7 @@ const UploadImage = () => {
   return (
     <div className="m-auto lg:m-0 bg-white  sm:shadow-[0px_0px_50px_10px_rgba(0,0,0,0.1)] rounded-4xl  sm:w-[448px] sm:h-[346px] flex items-center justify-center flex-col gap-4">
       {/* Hidden Input with Label acting as a button */}
-      <label className="font-medium text-2xl cursor-pointer rounded-full  text-white bg-[#007bff] text-center  w-[75vw] max-w-[448px] sm:w-fit sm:px-3 py-3">
+      <label className="font-medium text-2xl cursor-pointer rounded-full  text-white bg-[#007bff] text-center  w-[75vw] max-w-[448px] sm:w-fit sm:px-5 py-3">
         Upload Image
         <input
           type="file"
