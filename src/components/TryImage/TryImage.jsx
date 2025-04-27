@@ -10,8 +10,6 @@ const TryImage = () => {
     const response = await fetch(url);
     return await response.blob();
   }
-  //
-  // Usage
 
   return (
     <div className="">
