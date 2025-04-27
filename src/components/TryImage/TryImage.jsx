@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { MyContext } from "../../App";
 
 const TryImage = () => {
+  const { file, setFile } = useContext(MyContext);
+  const navigate = useNavigate();
+
+  async function createBlobFromPublicImage(url) {
+    const response = await fetch(url);
+    return await response.blob();
+  }
+  //
+  // Usage
+
   return (
     <div className="">
       <div className="h-[120px]  flex flex-col items-center justify-center gap-3 sm:flex-row  sm:gap-5 ">
@@ -12,6 +24,16 @@ const TryImage = () => {
           <img
             src="1photo.jpg"
             alt=""
+            /*  onClick={() => {
+              createBlobFromPublicImage("1photo.jpg").then((blob) => {
+                const fakeFile = new File([blob], "sample.jpg", {
+                  type: blob.type,
+                });
+                console.log(fakeFile);
+                setFile(fakeFile);
+              });
+              navigate("/upload");
+            }}*/
             className="rounded-lg w-[47.59px] h-[47.59px] sm:w-[63px] sm:h-[63px]  hover:contrast-[85%] hover:brightness-[115%] hover:cursor-pointer"
           />
           <img

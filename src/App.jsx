@@ -3,7 +3,8 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Upload from "./components/upload/Upload";
+import Upload from "./components/Upload/Upload";
+
 export const MyContext = createContext();
 
 const App = () => {

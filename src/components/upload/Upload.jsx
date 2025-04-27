@@ -4,6 +4,7 @@ import { MyContext } from "../../App";
 const Upload = () => {
   const { file, setFile } = useContext(MyContext);
   const [imageUrl, setImageUrl] = useState(URL.createObjectURL(file));
+  const [sparkle, setSparkle] = useState(true);
 
   const removeBackground = async (file) => {
     const formData = new FormData();
@@ -13,8 +14,7 @@ const Upload = () => {
     const response = await fetch("https://api.remove.bg/v1.0/removebg", {
       method: "POST",
       headers: {
-        // "X-Api-Key": "ic3RvBvrz3Tr8drUM9kg8odm",
-        "X-Api-Key": "ic3RvBvrz3Tr8drUM9kg8odmfake", // ⚠️ Visible in browser!
+        "X-Api-Key": "ic3RvBvrz3Tr8drUM9kg8odm",
       },
       body: formData,
     });
@@ -36,6 +36,7 @@ const Upload = () => {
         if (url) {
           setImageUrl(url);
         }
+        setSparkle(false);
       });
     }
   }, []);
@@ -44,7 +45,15 @@ const Upload = () => {
       <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10 md:gap-20 ">
         <div className="flex flex-col gap-5 items-center">
           <div className="rounded-lg border-2 w-[220px] h-[220px] ">
-            <img src={imageUrl} alt="upload" className="w-full h-full" />
+            <img
+              src={imageUrl}
+              alt="upload"
+              className={`h-full w-full ${
+                sparkle
+                  ? "border-4 border-red-600"
+                  : "border-2 border-green-500"
+              }`}
+            />
           </div>
           <div className="flex items-center gap-5 ">
             <span>
