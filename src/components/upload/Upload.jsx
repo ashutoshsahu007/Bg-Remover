@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { MyContext } from "../../App";
 
-export default Upload = () => {
+export default function Upload() {
   const { file, setFile } = useContext(MyContext);
   const [imageUrl, setImageUrl] = useState(URL.createObjectURL(file));
   const [sparkle, setSparkle] = useState(true);
@@ -375,4 +375,4 @@ export default Upload = () => {
       </div>
     </div>
   );
-};
+}
