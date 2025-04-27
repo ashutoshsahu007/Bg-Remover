@@ -10,6 +10,8 @@ export const MyContext = createContext();
 const App = () => {
   const [file, setFile] = useState(null);
 
+  // just for testing purpose
+
   return (
     <MyContext.Provider value={{ file, setFile }}>
       <BrowserRouter>
