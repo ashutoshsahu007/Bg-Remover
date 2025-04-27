@@ -14,7 +14,8 @@ const Upload = () => {
     const response = await fetch("https://api.remove.bg/v1.0/removebg", {
       method: "POST",
       headers: {
-        "X-Api-Key": "ic3RvBvrz3Tr8drUM9kg8odm",
+        // "X-Api-Key": "ic3RvBvrz3Tr8drUM9kg8odm",
+        "X-Api-Key": "R3SyH8bi6v8Bx16wv9nDMb9q",
       },
       body: formData,
     });
